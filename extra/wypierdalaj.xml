@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="wypierdalaj"
+           fetch="https://github.com/WypierdalajOS"
+           revision="refs/heads/12.1" />
+
+  <!-- rootdir -->
+  <project path="manifest" name="platform_manifest" remote="wypierdalaj" />
+
+  <!-- vendor -->
+  <project path="vendor/wypierdalaj" name="platform_vendor_wypierdalaj" remote="wypierdalaj" />
+
+</manifest>

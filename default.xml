@@ -2,11 +2,11 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com/"
            review="https://android-review.googlesource.com/" />
+
   <default revision="refs/tags/android-12.1.0_r8"
-           remote="aosp"
-           sync-j="4" />
+           remote="aosp" />
 
   <superproject name="platform/superproject" remote="aosp" revision="android-12.1.0_r8" />
   <contactinfo bugurl="go/repo-bug" />
@@ -1104,5 +1104,14 @@
   <project path="tools/trebuchet" name="platform/tools/trebuchet" groups="tools,cts,pdk,pdk-cw-fs,pdk-fs" />
 
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
+
+  <!-- Remove unused AOSP repos -->
+  <include name="extra/remove.xml" />
+
+  <!-- Add all WypierdalajOS repos -->
+  <include name="extra/wypierdalaj.xml" />
+
+  <!-- Add all external repos -->
+  <include name="extra/external.xml" />
 
 </manifest>
